@@ -1,0 +1,14 @@
+* {
+  text-align: center;
+}
+h1 {
+    margin:50px;
+    font-family: sans-serif;
+}
+
+h1:hover{
+  color:purple;
+  text-decoration: underline;
+  cursor: grabbing;
+}
+
