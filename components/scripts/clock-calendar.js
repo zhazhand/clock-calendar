@@ -14,7 +14,7 @@ class ClockCalendar extends HTMLElement {
     this.addEventListener('contextmenu', this.changeView);
   }
 
-  disconnectedCallback(){
+  disconnectedCallback() {
     this.removeEventListener('click', this.changeFormat);
     this.removeEventListener('contextmenu', this.changeView);
   }
@@ -24,6 +24,7 @@ class ClockCalendar extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
+    attrName = 'current-view';
     if (oldVal !== newVal) {
       let element;
       switch (newVal) {
@@ -48,7 +49,7 @@ class ClockCalendar extends HTMLElement {
             break;
           }
       }
-      this.childNodes[0]?this.replaceChild(element, this.childNodes[0]):this.appendChild(element);
+      this.childNodes[0] ? this.replaceChild(element, this.childNodes[0]) : this.appendChild(element);
     }
 
   }
